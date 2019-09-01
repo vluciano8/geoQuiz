@@ -1,0 +1,432 @@
+# geoQuiz
+Geo test based in the Modern Javascript tutorial form Shaun Pelling
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Geo Quiz</title>
+</head>
+<body>
+  <!-- top section -->
+  <div class="intro py-3 bg-white text-center">
+    <div class="container">
+      <h2 class="text-primary display-3 my-4">Test de Geografía</h2>
+    </div>
+  </div>
+  <!--result section -->
+  <div class="result py-4 d-none bg-light text-center">
+    <div class="container lead">
+      <p>Conoces un <span class="text-primary display-4 p-3">0%</span>de Geografía mundial</p>
+    </div>
+  </div>
+
+  <!--quiz section  -->
+  <div class="quiz py-4 bg-primary">
+    <div class="container">
+      <h2 class="my-5 text-white">Responde las preguntas</h2>
+      <form class="quiz-form text-light">
+        <!-- PREGUNTA 1 -->
+        <div class="my-5">
+          <p class="lead font-weight-normal">1. ¿El gran desierto de Gobi se encuentra en..?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q1" value="A">
+            <label class="form-check-label">America Central</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q1" value="B">
+            <label class="form-check-label">AsiaC</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q1" value="C">
+              <label class="form-check-label">Sudamerica</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q1" value="D">
+              <label class="form-check-label">Africa</label>
+          </div>
+        </div>
+        <!-- PREGUNTA 2 -->
+        <div class="my-5">
+            <p class="lead font-weight-normal">2. ¿En qué país se ubican las ruinas de Esparta?</p>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q2" value="A">
+              <label class="form-check-label">Italia</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q2" value="B">
+              <label class="form-check-label">GreciaC</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q2" value="C">
+              <label class="form-check-label">Turquia</label>
+            </div>
+          </div>
+        <!-- PREGUNTA 3 -->
+        <div class="my-5">
+            <p class="lead font-weight-normal">3. En La Antártida no hay residentes permanentes.</p>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q3" value="A">
+              <label class="form-check-label">VerdadC</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q3" value="B">
+              <label class="form-check-label">Mentira</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q3" value="C">
+              <label class="form-check-label">Menos de 100k</label>
+            </div>
+          </div>
+        <!-- PREGUNTA 4 -->
+        <div class="my-5">
+            <p class="lead font-weight-normal">4. ¿Cuál de estos países no tiene acceso al Mar Mediterráneo?</p>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q4" value="A">
+              <label class="form-check-label">Eslovenia</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q4" value="B">
+              <label class="form-check-label">SerbiaC</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q4" value="C">
+              <label class="form-check-label">Chipre</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q4" value="D">
+              <label class="form-check-label">Egipto</label>
+            </div>
+        </div>
+        <!-- PREGUNTA 5 -->
+        <div class="my-5">
+            <p class="lead font-weight-normal">5. ¿Cuál es el rio más largo del mundo?</p>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q5" value="A">
+              <label class="form-check-label">Amazonas</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q5" value="B">
+              <label class="form-check-label">NiloC</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q5" value="C">
+              <label class="form-check-label">Rio Amarillo</label>
+            </div>
+            <div class="form-check my-2 text-white-50">
+              <input type="radio" name="q5" value="D">
+              <label class="form-check-label">Yangtsé</label>
+            </div>
+        </div>
+      <!-- PREGUNTA 6 -->
+      <div class="my-5">
+          <p class="lead font-weight-normal">6. ¿Qué país es el segundo más grande del mundo en términos de población?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q6" value="A">
+            <label class="form-check-label">China</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q6" value="B">
+            <label class="form-check-label">Rusia</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q6" value="C">
+            <label class="form-check-label">IndiaC</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q6" value="D">
+            <label class="form-check-label">Brasil</label>
+          </div>
+      </div>    
+      <!-- PREGUNTA 7 -->
+      <div class="my-5">
+          <p class="lead font-weight-normal">7. ¿Cuál de estos países es bañado únicamente por un océano?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q7" value="A">
+            <label class="form-check-label">Gran BretañaC</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q7" value="B">
+            <label class="form-check-label">Canada</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q7" value="C">
+            <label class="form-check-label">Rusia</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q7" value="D">
+            <label class="form-check-label">México</label>
+          </div>
+      </div>    
+      <!-- PREGUNTA 8 -->
+      <div class="my-5">
+          <p class="lead font-weight-normal">8. ¿Cuántos continentes hay en la Tierra?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q8" value="A">
+            <label class="form-check-label">5</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q8" value="B">
+            <label class="form-check-label">6C</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q8" value="C">
+            <label class="form-check-label">7</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q8" value="D">
+            <label class="form-check-label">8</label>
+          </div>
+      </div> 
+      <!-- PREGUNTA 9 -->
+      <div class="my-5">
+          <p class="lead font-weight-normal">9. ¿Cuántos océanos hay en la Tierra?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q9" value="A">
+            <label class="form-check-label">11</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q9" value="B">
+            <label class="form-check-label">5C</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q9" value="C">
+            <label class="form-check-label">7</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q9" value="D">
+            <label class="form-check-label">6</label>
+          </div>
+      </div> 
+      <!-- PREGUNTA 10 -->
+      <div class="my-5">
+          <p class="lead font-weight-normal">10. ¿Cuál de estos países es el más grande en África?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q10" value="A">
+            <label class="form-check-label">ArgeliaC</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q10" value="B">
+            <label class="form-check-label">Republica Democratica del Congo</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q10" value="C">
+            <label class="form-check-label">Tanzania</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q10" value="D">
+            <label class="form-check-label">Namibia</label>
+          </div>
+        </div>
+       <!-- PREGUNTA 11 -->
+       <div class="my-5">
+          <p class="lead font-weight-normal">11. ¿Cuál de estos países es el más poblado de África?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q11" value="A">
+            <label class="form-check-label">Egipto</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q11" value="B">
+            <label class="form-check-label">Mali</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q11" value="C">
+            <label class="form-check-label">Marruecos</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q11" value="D">
+            <label class="form-check-label">NigeriaC</label>
+          </div>
+        </div>
+       <!-- PREGUNTA 12 -->
+       <div class="my-5">
+          <p class="lead font-weight-normal">12. ¿Cuál es la parte más seca de la Tierra?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q12" value="A">
+            <label class="form-check-label">America del Norte</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q12" value="B">
+            <label class="form-check-label">America del Sur</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q12" value="C">
+            <label class="form-check-label">AntartidaC</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q12" value="D">
+            <label class="form-check-label">Asia</label>
+          </div>
+        </div> 
+      <!-- PREGUNTA 13 -->
+       <div class="my-5">
+          <p class="lead font-weight-normal">13. ¿Cuál es el lago más profundo del mundo?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q13" value="A">
+            <label class="form-check-label">Huron</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q13" value="B">
+            <label class="form-check-label">BaikalC</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q13" value="C">
+            <label class="form-check-label">Victoria</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q13" value="D">
+            <label class="form-check-label">Constanza</label>
+          </div>
+        </div>  
+       <!-- PREGUNTA 14 -->
+       <div class="my-5">
+          <p class="lead font-weight-normal">14. ¿Cuál es la isla más grande del mar Mediterráneo?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q14" value="A">
+            <label class="form-check-label">Cerdeña</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q14" value="B">
+            <label class="form-check-label">Chipre</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q14" value="C">
+            <label class="form-check-label">SiciliaC</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q14" value="D">
+            <label class="form-check-label">Mallorca</label>
+          </div>
+        </div> 
+      <!-- PREGUNTA 15 -->
+      <div class="my-5">
+          <p class="lead font-weight-normal">15. ¿En que frontera se encuentra el Everest?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q15" value="A">
+            <label class="form-check-label">Nepal e India</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q15" value="B">
+            <label class="form-check-label">China e India</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q15" value="C">
+            <label class="form-check-label">China y NepalC</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q15" value="D">
+            <label class="form-check-label">China y Rusia</label>
+          </div>
+        </div> 
+      <!-- PREGUNTA 16 -->
+      <div class="my-5">
+          <p class="lead font-weight-normal">16. El estrecho de Gibraltar separa España de:
+          </p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q16" value="A">
+            <label class="form-check-label">Argelia</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q16" value="B">
+            <label class="form-check-label">MarruecosC</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q16" value="C">
+            <label class="form-check-label">Libia</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q16" value="D">
+            <label class="form-check-label">Portugal</label>
+          </div>
+        </div>
+       <!-- PREGUNTA 17 -->
+       <div class="my-5">
+          <p class="lead font-weight-normal">17. ¿Cuál es la ciudad más poblada del mundo?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q17" value="A">
+            <label class="form-check-label">ShangaiC</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q17" value="B">
+            <label class="form-check-label">Pekin</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q17" value="C">
+            <label class="form-check-label">Nueva Delhi</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q17" value="D">
+            <label class="form-check-label">Mexico DF</label>
+          </div>
+        </div>
+       <!-- PREGUNTA 18 -->
+       <div class="my-5">
+          <p class="lead font-weight-normal">18. ¿Cuál es la capital de Estonia?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q18" value="A">
+            <label class="form-check-label">TallinC</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q18" value="B">
+            <label class="form-check-label">Riga</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q18" value="C">
+            <label class="form-check-label">Vilnus</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q18" value="D">
+            <label class="form-check-label">Sophia</label>
+          </div>
+        </div> 
+      <!-- PREGUNTA 19 -->
+       <div class="my-5">
+          <p class="lead font-weight-normal">19. ¿Cuántos volcanes siguen activos en el mundo?</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q19" value="A">
+            <label class="form-check-label">1000</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q19" value="B">
+            <label class="form-check-label">1500C</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q19" value="C">
+            <label class="form-check-label">1200</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q19" value="D">
+            <label class="form-check-label">1900</label>
+          </div>
+        </div>  
+       <!-- PREGUNTA 20 -->
+       <div class="my-5">
+          <p class="lead font-weight-normal">20. ¿Qué capital está más al norte del planeta</p>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q20" value="A">
+            <label class="form-check-label">ReikiavikC</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q20" value="B">
+            <label class="form-check-label">Estocolmo</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q20" value="C">
+            <label class="form-check-label">Oslo</label>
+          </div>
+          <div class="form-check my-2 text-white-50">
+            <input type="radio" name="q20" value="D">
+            <label class="form-check-label">Moscú</label>
+          </div>
+        </div> 
+      <div class="text-center">
+        <input type="submit" class="btn btn-light">
+      </div>
+      </form> 
+    </div>
+  </div>
+<script src="app.js"></script>  
+</body>
+</html>
